@@ -23,10 +23,10 @@ function CreateArea(props) {
   }
 
 function submitNote(event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent default first
 
   if (note.title.trim() === "" && note.content.trim() === "") {
-    return; 
+    return; // Don't add empty note
   }
 
   props.onAdd(note);
